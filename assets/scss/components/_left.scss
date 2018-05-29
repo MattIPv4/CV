@@ -1,0 +1,13 @@
+@import 'core/globals';
+
+.left {
+  @import 'left/details';
+  @import 'left/profile';
+  @import 'left/hello';
+  @import 'left/links';
+
+  h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+}

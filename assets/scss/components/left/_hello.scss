@@ -1,0 +1,17 @@
+.hello {
+  margin-top: 25px;
+}
+
+.contact {
+  margin-top: 25px;
+  h2 + p.purple {
+    margin-top: 10px;
+  }
+
+  p {
+    margin: 0;
+    &.purple {
+      margin-top: 25px;
+    }
+  }
+}

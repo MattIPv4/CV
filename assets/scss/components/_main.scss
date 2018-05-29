@@ -1,0 +1,9 @@
+@import 'core/globals';
+
+.main {
+  @import 'main/header';
+  @import 'main/content';
+  @import 'main/footer';
+
+  border-left: $border;
+}

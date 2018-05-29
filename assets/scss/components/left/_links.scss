@@ -1,0 +1,41 @@
+@import '../core/globals';
+
+.links {
+  margin-top: 15px;
+
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  .icons {
+    margin-left: -8px;
+
+    a {
+      border-bottom-right-radius: 50px;
+      border-top-left-radius: 50px;
+      font-size: 18px;
+      padding: 5px 20px;
+      text-decoration: none;
+
+      @mixin link($color, $bg) {
+        border: 1px solid $bg;
+        &:hover {
+          background: $bg;
+          color: $color;
+        }
+      }
+
+      &.twitter {
+        @include link(#fff, #00b0ed);
+      }
+
+      &.github {
+        @include link(#fff, #333);
+      }
+
+      &.personal {
+        @include link(#fff, $primary);
+      }
+    }
+  }
+}

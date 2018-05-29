@@ -1,0 +1,73 @@
+@import '../core/globals';
+
+.block {
+  margin: 25px 30px;
+
+  .item {
+    margin-bottom: 25px;
+
+    >p {
+      margin-bottom: -5px;
+    }
+  }
+
+  h1 {
+    margin-left: -5px;
+    font-weight: 200;
+  }
+}
+
+.line {
+  $circle-overlap: 5px;
+  $circle-margin: 5px;
+  $circle-size: 26px;
+
+  margin: 34px 0 0 30px;
+  height: $circle-size;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .line_left,
+  .line_right {
+    border-top: $border;
+    flex-grow: 1;
+  }
+
+  .left_circle,
+  .central_circle,
+  .right_circle {
+    background: rgba(desaturate($primary, 25%), .15);
+    border-radius: 50px;
+  }
+
+  .left_circle,
+  .right_circle {
+    width: $circle-size / 2;
+    height: $circle-size / 2;
+  }
+
+  .left_circle {
+    margin-left: $circle-margin;
+    margin-right: -$circle-overlap;
+  }
+
+  .central_circle {
+    width: $circle-size;
+    height: $circle-size;
+  }
+
+  .right_circle {
+    margin-left: -$circle-overlap;
+    margin-right: $circle-margin;
+  }
+}
+
+ul {
+  li {
+    font-size: 14px;
+    line-height: 1em;
+    margin-bottom: 4px;
+  }
+}

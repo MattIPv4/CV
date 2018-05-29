@@ -1,0 +1,23 @@
+scss_files: 'assets/scss/*.scss'
+
+linters:
+  SelectorDepth:
+    enabled: false
+
+  SelectorFormat:
+    enabled: false
+
+  NestingDepth:
+    enabled: false
+
+  TrailingWhitespace:
+    enabled: false
+
+  ImportantRule:
+    enabled: false
+
+  SingleLinePerSelector:
+    enabled: false
+
+  ColorVariable:
+    enabled: false

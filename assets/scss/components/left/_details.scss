@@ -1,0 +1,19 @@
+@import '../core/globals';
+
+.details {
+
+  .name {
+    text-transform: uppercase;
+    font-size: 32px;
+    margin: 43px 0 0;
+  }
+
+  .occupation {
+    text-transform: uppercase;
+    margin-top: 5px;
+    color: lighten($primary, 10%);
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding-left: 7px;
+  }
+}

@@ -1,0 +1,10 @@
+@import '../core/globals';
+
+.footer {
+  border-top: $border;
+
+  .name {
+    font-style: italic;
+    margin: 20px;
+  }
+}

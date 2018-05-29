@@ -1,0 +1,65 @@
+@import '../core/globals';
+
+.menu {
+
+  .buttons {
+
+    justify-content: flex-end;
+    display: flex;
+
+    ul {
+
+      display: inline-flex;
+
+      a {
+        text-decoration: none;
+        font-size: 12px;
+        font-family: 'Lato', Helvetica, sans-serif;
+        font-style: italic;
+        line-height: 45px;
+        padding: 16px 17px;
+        background: #353638;
+
+        &:hover {
+          background: #020609;
+
+          .icon {
+            color: #e4e3e8;
+          }
+        }
+      }
+    }
+
+    .icon {
+      color: #02070a;
+      padding-right: 6px;
+      font-style: normal;
+      font-size: 18px;
+    }
+  }
+
+  .nav {
+    margin-top: 5px;
+
+    li {
+      border-left: $border;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      a {
+        font-family: 'Lato', Helvetica, sans-serif;
+        text-decoration: none;
+        padding: 0 20px;
+        font-size: 16px;
+        font-weight: 400;
+
+        &:hover {
+          color: desaturate($primary, 25%);
+        }
+      }
+    }
+  }
+}
+

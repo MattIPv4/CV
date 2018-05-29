@@ -1,0 +1,93 @@
+@import 'globals';
+
+.clear {
+  clear: both;
+}
+
+.highlight {
+  color: $highlight;
+
+  &.bold {
+    font-weight: bold;
+  }
+}
+
+.normal {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.hlist {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  li {
+    padding-left: 0;
+    text-indent: 0;
+    &:before {
+      content: none;
+    }
+  }
+}
+
+.cta {
+  display: inline-block;
+  height: 45px;
+  position: relative;
+  z-index: 1;
+  padding: 4px 0;
+  box-sizing: border-box;
+  border-top: $border;
+  border-bottom: $border;
+  text-decoration: none;
+
+  .cut1:after {
+    content: "";
+    position: absolute;
+    bottom: -19px;
+    left: -20px;
+    width: 30px;
+    height: 30px;
+    z-index: 9;
+    background: $background;
+    transform: rotate(45deg);
+    -webkit-clip-path: polygon(0 0, 50% 50%, 100% 0);
+    clip-path: polygon(0 0, 50% 50%, 100% 0);
+  }
+
+  .cut2:before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    right: -20px;
+    width: 30px;
+    height: 30px;
+    z-index: 9;
+    background: $background;
+    transform: rotate(45deg);
+    -webkit-clip-path: polygon(0 100%, 50% 50%, 100% 100%);
+    clip-path: polygon(0 100%, 50% 50%, 100% 100%);
+  }
+
+  .content {
+    text-align: center;
+    color: #04080b;
+    width: 100%;
+    height: 35px;
+    z-index: 2;
+    font: 16px 'Lato', Arial, sans-serif;
+    margin: 0;
+    display: block;
+    background: $highlight;
+    line-height: 35px;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  &:hover {
+    background: darken($highlight, 10%);
+  }
+}
