@@ -8,10 +8,10 @@
 
 .profile {
   height: 128px;
-  margin-top: 15px;
 
   * {
     border: $border;
+    box-sizing: border-box;
     height: 100%;
     max-width: 100%;
     padding: 5px;

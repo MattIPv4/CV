@@ -9,12 +9,12 @@
 .left {
   @import 'left/details';
   @import 'left/profile';
-  @import 'left/hello';
+  @import 'left/contact';
   @import 'left/skills';
   @import 'left/links';
 
   h2 {
     font-size: 24px;
-    margin: 0;
+    margin: 15px 0 5px;
   }
 }

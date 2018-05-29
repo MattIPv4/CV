@@ -1102,27 +1102,21 @@ ul {
     letter-spacing: 2px;
     padding-left: 7px; }
   .left .profile {
-    height: 128px;
-    margin-top: 15px; }
+    height: 128px; }
     .left .profile * {
       border: 1px solid #403f44;
+      box-sizing: border-box;
       height: 100%;
       max-width: 100%;
       padding: 5px; }
-  .left .hello {
-    margin-top: 25px; }
-  .left .contact {
-    margin-top: 25px; }
-    .left .contact p {
-      margin: 0; }
-      .left .contact p.highlight {
-        margin-top: 25px; }
+  .left .contact p {
+    margin: 0; }
+    .left .contact p.highlight {
+      margin-top: 5px; }
   .left .skills ul li {
     margin: 0; }
   .left .links {
     margin-top: 15px; }
-    .left .links h2 {
-      margin-bottom: 8px; }
     .left .links .icons {
       margin-left: -8px; }
       .left .links .icons a {
@@ -1148,7 +1142,7 @@ ul {
             color: #fff; }
   .left h2 {
     font-size: 24px;
-    margin: 0; }
+    margin: 15px 0 5px; }
 
 /**
  *  Matt Cowley - CV: An elegant and expandable CV design made with SASS, HTML and love.
