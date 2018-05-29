@@ -4,13 +4,11 @@
 
 .contact {
   margin-top: 25px;
-  h2 + p.purple {
-    margin-top: 10px;
-  }
 
   p {
     margin: 0;
-    &.purple {
+
+    &.highlight {
       margin-top: 25px;
     }
   }

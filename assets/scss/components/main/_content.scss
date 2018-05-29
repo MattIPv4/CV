@@ -6,14 +6,14 @@
   .item {
     margin-bottom: 25px;
 
-    >p {
+    > p {
       margin-bottom: -5px;
     }
   }
 
   h1 {
-    margin-left: -5px;
     font-weight: 200;
+    margin-left: -5px;
   }
 }
 
@@ -22,12 +22,12 @@
   $circle-margin: 5px;
   $circle-size: 26px;
 
-  margin: 34px 0 0 30px;
-  height: $circle-size;
+  align-items: center;
   display: flex;
   flex-direction: row;
+  height: $circle-size;
   justify-content: center;
-  align-items: center;
+  margin: 34px 0 0 30px;
 
   .line_left,
   .line_right {
@@ -44,8 +44,8 @@
 
   .left_circle,
   .right_circle {
-    width: $circle-size / 2;
     height: $circle-size / 2;
+    width: $circle-size / 2;
   }
 
   .left_circle {
@@ -54,8 +54,8 @@
   }
 
   .central_circle {
-    width: $circle-size;
     height: $circle-size;
+    width: $circle-size;
   }
 
   .right_circle {

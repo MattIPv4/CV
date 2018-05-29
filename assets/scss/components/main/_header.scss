@@ -4,21 +4,21 @@
 
   .buttons {
 
-    justify-content: flex-end;
     display: flex;
+    justify-content: flex-end;
 
     ul {
 
       display: inline-flex;
 
       a {
-        text-decoration: none;
-        font-size: 12px;
+        background: #353638;
         font-family: 'Lato', Helvetica, sans-serif;
+        font-size: 12px;
         font-style: italic;
         line-height: 45px;
         padding: 16px 17px;
-        background: #353638;
+        text-decoration: none;
 
         &:hover {
           background: #020609;
@@ -32,9 +32,9 @@
 
     .icon {
       color: #02070a;
-      padding-right: 6px;
-      font-style: normal;
       font-size: 18px;
+      font-style: normal;
+      padding-right: 6px;
     }
   }
 
@@ -45,15 +45,15 @@
       border-left: $border;
 
       &:first-child {
-        border-left: none;
+        border-left: 0;
       }
 
       a {
         font-family: 'Lato', Helvetica, sans-serif;
-        text-decoration: none;
-        padding: 0 20px;
         font-size: 16px;
         font-weight: 400;
+        padding: 0 20px;
+        text-decoration: none;
 
         &:hover {
           color: desaturate($primary, 25%);

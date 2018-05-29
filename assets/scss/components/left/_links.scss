@@ -19,6 +19,7 @@
 
       @mixin link($color, $bg) {
         border: 1px solid $bg;
+
         &:hover {
           background: $bg;
           color: $color;

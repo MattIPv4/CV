@@ -3,10 +3,11 @@
 .profile {
   height: 128px;
   margin-top: 15px;
+
   * {
-    max-width: 100%;
-    height: 100%;
-    padding: 5px;
     border: $border;
+    height: 100%;
+    max-width: 100%;
+    padding: 5px;
   }
 }

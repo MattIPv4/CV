@@ -990,19 +990,17 @@ ul {
   height: 128px;
   margin-top: 15px; }
   .left .profile * {
-    max-width: 100%;
+    border: 1px solid #403f44;
     height: 100%;
-    padding: 5px;
-    border: 1px solid #403f44; }
+    max-width: 100%;
+    padding: 5px; }
 .left .hello {
   margin-top: 25px; }
 .left .contact {
   margin-top: 25px; }
-  .left .contact h2 + p.purple {
-    margin-top: 10px; }
   .left .contact p {
     margin: 0; }
-    .left .contact p.purple {
+    .left .contact p.highlight {
       margin-top: 25px; }
 .left .links {
   margin-top: 15px; }
@@ -1032,45 +1030,45 @@ ul {
           background: #4a89dc;
           color: #fff; }
 .left h2 {
-  margin: 0;
-  font-size: 24px; }
+  font-size: 24px;
+  margin: 0; }
 
 .main {
   border-left: 1px solid #403f44; }
   .main .menu .buttons {
-    justify-content: flex-end;
-    display: flex; }
+    display: flex;
+    justify-content: flex-end; }
     .main .menu .buttons ul {
       display: inline-flex; }
       .main .menu .buttons ul a {
-        text-decoration: none;
-        font-size: 12px;
+        background: #353638;
         font-family: 'Lato', Helvetica, sans-serif;
+        font-size: 12px;
         font-style: italic;
         line-height: 45px;
         padding: 16px 17px;
-        background: #353638; }
+        text-decoration: none; }
         .main .menu .buttons ul a:hover {
           background: #020609; }
           .main .menu .buttons ul a:hover .icon {
             color: #e4e3e8; }
     .main .menu .buttons .icon {
       color: #02070a;
-      padding-right: 6px;
+      font-size: 18px;
       font-style: normal;
-      font-size: 18px; }
+      padding-right: 6px; }
   .main .menu .nav {
     margin-top: 5px; }
     .main .menu .nav li {
       border-left: 1px solid #403f44; }
       .main .menu .nav li:first-child {
-        border-left: none; }
+        border-left: 0; }
       .main .menu .nav li a {
         font-family: 'Lato', Helvetica, sans-serif;
-        text-decoration: none;
-        padding: 0 20px;
         font-size: 16px;
-        font-weight: 400; }
+        font-weight: 400;
+        padding: 0 20px;
+        text-decoration: none; }
         .main .menu .nav li a:hover {
           color: #658dc1; }
   .main .block {
@@ -1080,15 +1078,15 @@ ul {
       .main .block .item > p {
         margin-bottom: -5px; }
     .main .block h1 {
-      margin-left: -5px;
-      font-weight: 200; }
+      font-weight: 200;
+      margin-left: -5px; }
   .main .line {
-    margin: 34px 0 0 30px;
-    height: 26px;
+    align-items: center;
     display: flex;
     flex-direction: row;
+    height: 26px;
     justify-content: center;
-    align-items: center; }
+    margin: 34px 0 0 30px; }
     .main .line .line_left,
     .main .line .line_right {
       border-top: 1px solid #403f44;
@@ -1100,14 +1098,14 @@ ul {
       border-radius: 50px; }
     .main .line .left_circle,
     .main .line .right_circle {
-      width: 13px;
-      height: 13px; }
+      height: 13px;
+      width: 13px; }
     .main .line .left_circle {
       margin-left: 5px;
       margin-right: -5px; }
     .main .line .central_circle {
-      width: 26px;
-      height: 26px; }
+      height: 26px;
+      width: 26px; }
     .main .line .right_circle {
       margin-left: -5px;
       margin-right: 5px; }
