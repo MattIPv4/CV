@@ -4,11 +4,10 @@
  *  Copyright (C) 2018 Matt Cowley (MattIPv4) (me@mattcowley.co.uk)
  *  Please see <https://github.com/MattIPv4/CV/blob/master/LICENSE.md> for the full license.
  */
-$background: #434a54;
-$white: #e4e3e8;
-
-$primary: #4a89dc;
-$highlight: #37bc9b;
-
-$border-color: #403f44;
-$border: 1px solid $border-color;
+.skills {
+  ul {
+    li {
+      margin: 0;
+    }
+  }
+}

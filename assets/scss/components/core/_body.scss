@@ -8,6 +8,7 @@
 
 body {
   background: $background;
+  color: #e4e3e8;
   margin: 0;
 }
 
@@ -49,13 +50,14 @@ blockquote {
 }
 
 blockquote, p, a, li {
-  color: #e4e3e8;
   font-family: 'Lato', Helvetica, sans-serif;
   font-size: 15px;
   font-weight: 300;
 }
 
 a {
+  color: $white;
+
   &:hover,
   &:focus {
     color: $primary;
@@ -69,7 +71,6 @@ ul {
   padding: 0;
 
   li {
-    margin: 0;
 
     &::before {
       color: $primary;

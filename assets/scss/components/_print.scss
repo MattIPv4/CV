@@ -4,17 +4,35 @@
  *  Copyright (C) 2018 Matt Cowley (MattIPv4) (me@mattcowley.co.uk)
  *  Please see <https://github.com/MattIPv4/CV/blob/master/LICENSE.md> for the full license.
  */
-@import 'core/globals';
+@media print {
 
-.left {
-  @import 'left/details';
-  @import 'left/profile';
-  @import 'left/hello';
-  @import 'left/skills';
-  @import 'left/links';
+  body {
+    background: #fff;
+    color: #000;
+  }
 
-  h2 {
-    font-size: 24px;
-    margin: 0;
+  a {
+    color: #000;
+  }
+
+  .left,
+  .main {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .main {
+    border: 0;
+
+    .menu {
+      display: none;
+    }
+  }
+
+  .contact {
+    .cta {
+      display: none;
+    }
   }
 }
