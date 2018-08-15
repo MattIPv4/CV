@@ -1285,6 +1285,9 @@ ul {
  *  Please see <https://github.com/MattIPv4/CV/blob/master/LICENSE.md> for the full license.
  */
 @media print {
+  * {
+    font-family: Helvetica, sans-serif !important; }
+
   body {
     background: #fff;
     color: #000; }
@@ -1300,7 +1303,7 @@ ul {
 
   .main {
     border: 0; }
-    .main .menu {
+    .main .line, .main .menu {
       display: none; }
 
   .contact .cta {

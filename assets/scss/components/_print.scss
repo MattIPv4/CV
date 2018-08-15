@@ -6,6 +6,10 @@
  */
 @media print {
 
+  * {
+    font-family: Helvetica, sans-serif !important;
+  }
+
   body {
     background: #fff;
     color: #000;
@@ -25,7 +29,7 @@
   .main {
     border: 0;
 
-    .menu {
+    .line, .menu {
       display: none;
     }
   }
