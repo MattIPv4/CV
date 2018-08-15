@@ -120,7 +120,8 @@
             <div class="links">
                 <h2>On the internet</h2>
                 <ul class="icons hlist">
-                    <li><a class="twitter" target="_blank" href="https://twitter.com/MattIPv4">Twitter @MattIPv4</a></li>
+                    <li><a class="twitter" target="_blank" href="https://twitter.com/MattIPv4">Twitter @MattIPv4</a>
+                    </li>
                     <li><a class="github" target="_blank" href="https://github.com/MattIPv4">GitHub /MattIPv4</a></li>
                     <li><a class="personal" target="_blank" href="https://mattcowley.co.uk">mattcowley.co.uk</a></li>
                 </ul>
@@ -159,19 +160,23 @@
 
             <!-- Menu -->
             <div class="menu">
+                <!-- Top Buttons -->
                 <div class="buttons">
                     <ul class="hlist">
                         <li><a href="#" onclick="cv_pdf(this); return false;">Download CV</a></li>
                         <li><a href="#" onclick="cv_print(this); return false;">Print CV</a></li>
                     </ul>
                 </div>
+                <!-- End Top Buttons -->
 
+                <!-- Quick Jump -->
                 <ul class="nav hlist">
                     <li><a class="highlight" href="#words">A few words</a></li>
                     <li><a href="#development">Development</a></li>
                     <li><a href="#theatre">Theatre</a></li>
                     <li><a href="#other">Other</a></li>
                 </ul>
+                <!-- End Quick Jump -->
             </div>
 
             <!-- Content -->
@@ -194,6 +199,7 @@
                 </div>
                 <!-- End Words -->
 
+                <!-- Divider -->
                 <div class="line">
                     <div class="line_left"></div>
                     <div class="left_circle"></div>
@@ -201,6 +207,7 @@
                     <div class="right_circle"></div>
                     <div class="line_right"></div>
                 </div>
+                <!-- End Divider -->
 
                 <!-- Development -->
                 <div class="block" id="development">
@@ -303,6 +310,7 @@
                 </div>
                 <!-- End Development -->
 
+                <!-- Divider -->
                 <div class="line">
                     <div class="line_left"></div>
                     <div class="left_circle"></div>
@@ -310,6 +318,7 @@
                     <div class="right_circle"></div>
                     <div class="line_right"></div>
                 </div>
+                <!-- End Divider -->
 
                 <!-- Theatre -->
                 <div class="block" id="theatre">
@@ -335,8 +344,7 @@
                         <ul>
                             <li>Responsible for maintenance of all electrical equipment within the theatre company.</li>
                             <li>Responsible for wiring and checking any practical effects used.</li>
-                            <li>Part of many shows put on by the company often in high-stress and responsible roles.
-                            </li>
+                            <li>Assisting with training of new members in all aspects of lighting and electrics.</li>
                             <li>Additionally, maintenance of all email used by the company, Google Drive access and the
                                 website.
                             </li>
@@ -405,6 +413,7 @@
                 </div>
                 <!-- End Theatre -->
 
+                <!-- Divider -->
                 <div class="line">
                     <div class="line_left"></div>
                     <div class="left_circle"></div>
@@ -412,6 +421,7 @@
                     <div class="right_circle"></div>
                     <div class="line_right"></div>
                 </div>
+                <!-- End Divider -->
 
                 <!-- Other -->
                 <div class="block" id="other">
@@ -476,10 +486,11 @@
             <!-- Footer -->
             <div class="footer">
                 <p class="name">
-                    Matt Cowley - CV (Last Update: 29/5/18)
+                    Matt Cowley - CV (Last Update: 15/8/18)
                     <br/><a href="https://cv.mattcowley.co.uk/" target="_blank">https://cv.mattcowley.co.uk/</a>
                 </p>
             </div>
+            <!-- End Footer -->
         </div>
     </div>
 </div>
@@ -503,18 +514,33 @@
         if (elm.disabled) return;
 
         var org = elm.innerText;
-        setTimeout(function () {
-            elm.innerText = org;
-            elm.disabled = false;
-        }, 2 * 60 * 1000);
         elm.innerText = "Downloading...";
         elm.disabled = true;
 
-        var link = document.createElement('a');
-        link.href = 'http://html2pdfrocket.com/html/topdf?apikey=3eca64fb-b7e8-4cf0-8617-dcc9e94c2a9e&filename=' + encodeURIComponent(document.title.replace(/\s/g, '_')) + '.pdf&url=' + encodeURIComponent(window.location.href);
-        link.download = document.title + '.pdf';
-        link.target = '_blank';
-        link.dispatchEvent(new MouseEvent('click'));
+        var self = this;
+        self.req = new XMLHttpRequest();
+
+        var url = "https://api.html2pdfrocket.com/pdf";
+        var apiKey = "3eca64fb-b7e8-4cf0-8617-dcc9e94c2a9e";
+        var data = "apikey=" + apiKey + "&value=" + encodeURIComponent(window.location.href) + "&FileName=" + encodeURIComponent(document.title.replace(/\s/g, '_')) + "&UsePrintStylesheet=true";
+
+        self.req.onload = function(event) {
+            var link = document.createElement('a');
+            var blobUrl = window.URL.createObjectURL(self.req.response);
+            link.href = blobUrl;
+            link.download = document.title + '.pdf';
+            link.dispatchEvent(new MouseEvent('click'));
+            window.URL.revokeObjectURL(blobUrl);
+
+            elm.innerText = org;
+            elm.disabled = false;
+        };
+
+        self.req.open("POST", url, true);
+        self.req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        self.req.responseType = "blob";
+
+        self.req.send(data);
     }
 </script>
 </body>
