@@ -1286,7 +1286,8 @@ ul {
  */
 @media print {
   * {
-    font-family: Helvetica, sans-serif !important; }
+    font-family: Helvetica, sans-serif !important;
+    letter-spacing: normal; }
 
   body {
     background: #fff;
