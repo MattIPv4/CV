@@ -6,9 +6,9 @@
  */
 @media print {
 
-  * {
+  *, h1, h2, h3, h4, h5, h6, blockquote, p, a, li {
     font-family: Helvetica, sans-serif !important;
-    letter-spacing: normal;
+    letter-spacing: normal !important;
   }
 
   body {

@@ -1285,9 +1285,9 @@ ul {
  *  Please see <https://github.com/MattIPv4/CV/blob/master/LICENSE.md> for the full license.
  */
 @media print {
-  * {
+  *, h1, h2, h3, h4, h5, h6, blockquote, p, a, li {
     font-family: Helvetica, sans-serif !important;
-    letter-spacing: normal; }
+    letter-spacing: normal !important; }
 
   body {
     background: #fff;
