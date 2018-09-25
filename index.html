@@ -150,6 +150,7 @@
                         at GCSE.
                         Additionally, gained an 8/6 in English Lit/Lang and a B in Biology, Chemistry, Art, French
                         & RS at GCSE.
+                        Currently taking A level Computer Science, Maths and Business Studies.
                     </p>
                 </blockquote>
             </div>
@@ -251,7 +252,7 @@
                         <blockquote>
                             <p>
                                 <span class="normal">
-                                    Development Manager <small>(Java/Python/Web)</small>
+                                    Development Manager <small>(Java/Python/Web [PHP])</small>
                                     <br/>also, Customer Support
                                 </span>
 
@@ -272,6 +273,37 @@
                             </li>
                             <li>Providing live chat support in Discord for users of the bot and helping them with issues
                                 alongside evaluating user feature requests.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="item">
+                        <p>
+                            <span class="normal highlight">BotBlock, Discord</span>
+                            <small>(August 2018 – Present)</small>
+                        </p>
+                        <blockquote>
+                            <p>
+                                <span class="normal">
+                                    Lead Developer <small>(Web [PHP])</small>
+                                    <br/>also, Project Manager
+                                </span>
+
+                                <br/><a href="https://botblock.org/"
+                                        target="_blank">https://botblock.org/</a>
+                            </p>
+                        </blockquote>
+                        <ul>
+                            <li>Linking into multiple existing APIs from other projects and sites to enable the BotBlock
+                                site to communicate with them.
+                            </li>
+                            <li>Working with team members from other projects related to BotBlock to coordinate a
+                                successful product.
+                            </li>
+                            <li>Supporting third part developers creating libraries to work with the project's API.
+                            </li>
+                            <li>Integrating Discord's OAuth2 system to allow users to sign into the site, allowing
+                                access to additional features and information.
                             </li>
                         </ul>
                     </div>
@@ -486,7 +518,7 @@
             <!-- Footer -->
             <div class="footer">
                 <p class="name">
-                    Matt Cowley - CV (Last Update: 15/8/18)
+                    Matt Cowley - CV (Last Update: 25/9/18)
                     <br/><a href="https://cv.mattcowley.co.uk/" target="_blank">https://cv.mattcowley.co.uk/</a>
                 </p>
             </div>
@@ -524,7 +556,7 @@
         var apiKey = "3eca64fb-b7e8-4cf0-8617-dcc9e94c2a9e";
         var data = "apikey=" + apiKey + "&value=" + encodeURIComponent(window.location.href) + "&FileName=" + encodeURIComponent(document.title.replace(/\s/g, '_')) + "&UsePrintStylesheet=true";
 
-        self.req.onload = function(event) {
+        self.req.onload = function (event) {
             var link = document.createElement('a');
             var blobUrl = window.URL.createObjectURL(self.req.response);
             link.href = blobUrl;
