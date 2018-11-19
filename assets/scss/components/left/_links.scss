@@ -36,6 +36,10 @@
         @include link(#fff, #333);
       }
 
+      &.linkedin {
+        @include link(#fff, #0077b5);
+      }
+
       &.personal {
         @include link(#fff, $primary);
       }

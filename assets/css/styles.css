@@ -1135,6 +1135,11 @@ ul {
           .left .links .icons a.github:hover {
             background: #333;
             color: #fff; }
+        .left .links .icons a.linkedin {
+          border: 1px solid #0077b5; }
+          .left .links .icons a.linkedin:hover {
+            background: #0077b5;
+            color: #fff; }
         .left .links .icons a.personal {
           border: 1px solid #4a89dc; }
           .left .links .icons a.personal:hover {
