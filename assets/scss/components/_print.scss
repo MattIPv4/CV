@@ -35,6 +35,32 @@
     }
   }
 
+  .left {
+    .links {
+      .icons {
+        flex-direction: column;
+
+        li {
+          margin: 0 0 0 10px;
+
+          a {
+            border-bottom-width: 0 !important;
+            border-left-width: 2px !important;
+            border-radius: 0;
+            border-right-width: 0 !important;
+            border-top-width: 0 !important;
+            font-size: 16px;
+            padding: 0 0 0 5px;
+
+            &::after {
+              content: ' - ' attr(href);
+            }
+          }
+        }
+      }
+    }
+  }
+
   .contact {
     .cta {
       display: none;

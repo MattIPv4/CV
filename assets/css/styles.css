@@ -1003,10 +1003,25 @@ h4 {
 blockquote {
   border-left: 2px solid #4a89dc;
   font-style: italic;
-  margin: 10px 0;
-  padding-left: 20px; }
+  margin: 10px 0 10px 5px;
+  padding-left: 15px; }
   blockquote p {
     margin: 0; }
+    blockquote p .position {
+      font-size: 1.2em; }
+    blockquote p .present {
+      color: #4a89dc;
+      font-size: 1.1em;
+      font-weight: normal; }
+  blockquote + p {
+    margin: 10px 0; }
+
+section + section {
+  margin: 15px 0 0 10px; }
+section.past blockquote {
+  border-color: #8090a6; }
+section.past ul li::before {
+  color: #8090a6; }
 
 blockquote, p, a, li {
   font-family: 'Lato', Helvetica, sans-serif;
@@ -1236,11 +1251,9 @@ ul {
         .main .menu .nav li a:hover {
           color: #658dc1; }
   .main .block {
-    margin: 25px 30px; }
+    margin: 15px 30px; }
     .main .block .item {
       margin-bottom: 25px; }
-      .main .block .item > p {
-        margin-bottom: -5px; }
     .main .block h1 {
       font-weight: 200;
       margin-left: -5px; }
@@ -1250,7 +1263,7 @@ ul {
     flex-direction: row;
     height: 26px;
     justify-content: center;
-    margin: 34px 0 0 30px; }
+    margin: 0 0 0 30px; }
     .main .line .line_left,
     .main .line .line_right {
       border-top: 1px solid #403f44;
@@ -1311,6 +1324,21 @@ ul {
     border: 0; }
     .main .line, .main .menu {
       display: none; }
+
+  .left .links .icons {
+    flex-direction: column; }
+    .left .links .icons li {
+      margin: 0 0 0 10px; }
+      .left .links .icons li a {
+        border-bottom-width: 0 !important;
+        border-left-width: 2px !important;
+        border-radius: 0;
+        border-right-width: 0 !important;
+        border-top-width: 0 !important;
+        font-size: 16px;
+        padding: 0 0 0 5px; }
+        .left .links .icons li a::after {
+          content: " - " attr(href); }
 
   .contact .cta {
     display: none; } }

@@ -21,3 +21,6 @@ linters:
 
   ColorVariable:
     enabled: false
+
+  Comment:
+    enabled: false

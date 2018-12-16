@@ -7,14 +7,10 @@
 @import '../core/globals';
 
 .block {
-  margin: 25px 30px;
+  margin: 15px 30px;
 
   .item {
     margin-bottom: 25px;
-
-    > p {
-      margin-bottom: -5px;
-    }
   }
 
   h1 {
@@ -33,7 +29,7 @@
   flex-direction: row;
   height: $circle-size;
   justify-content: center;
-  margin: 34px 0 0 30px;
+  margin: 0 0 0 30px;
 
   .line_left,
   .line_right {

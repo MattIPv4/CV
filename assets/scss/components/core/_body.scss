@@ -41,11 +41,45 @@ h4 {
 blockquote {
   border-left: 2px solid $primary;
   font-style: italic;
-  margin: 10px 0;
-  padding-left: 20px;
+  margin: 10px 0 10px 5px;
+  padding-left: 15px;
 
   p {
     margin: 0;
+
+    .position {
+      font-size: 1.2em;
+    }
+
+    .present {
+      color: $primary;
+      font-size: 1.1em;
+      font-weight: normal;
+    }
+  }
+
+  + p {
+    margin: 10px 0;
+  }
+}
+
+section {
+  + section {
+    margin: 15px 0 0 10px;
+  }
+
+  &.past {
+    blockquote {
+      border-color: desaturate($primary, 50%);
+    }
+
+    ul {
+      li {
+        &::before {
+          color: desaturate($primary, 50%);
+        }
+      }
+    }
   }
 }
 
