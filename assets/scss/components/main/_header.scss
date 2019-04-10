@@ -4,8 +4,6 @@
  *  Copyright (C) 2018 Matt Cowley (MattIPv4) (me@mattcowley.co.uk)
  *  Please see <https://github.com/MattIPv4/CV/blob/master/LICENSE.md> for the full license.
  */
-@import '../core/globals';
-
 .menu {
 
   .buttons {
@@ -18,7 +16,7 @@
       display: inline-flex;
 
       a {
-        background: #353638;
+        background: $border-color;
         font-family: 'Lato', Helvetica, sans-serif;
         font-size: 12px;
         font-style: italic;
@@ -27,17 +25,17 @@
         text-decoration: none;
 
         &:hover {
-          background: #020609;
+          background: darken($border-color, 25%);
 
           .icon {
-            color: #e4e3e8;
+            color: $white;
           }
         }
       }
     }
 
     .icon {
-      color: #02070a;
+      color: darken($border-color, 25%);
       font-size: 18px;
       font-style: normal;
       padding-right: 6px;

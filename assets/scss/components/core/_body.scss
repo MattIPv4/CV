@@ -4,11 +4,9 @@
  *  Copyright (C) 2018 Matt Cowley (MattIPv4) (me@mattcowley.co.uk)
  *  Please see <https://github.com/MattIPv4/CV/blob/master/LICENSE.md> for the full license.
  */
-@import 'globals';
-
 body {
   background: $background;
-  color: #e4e3e8;
+  color: $white;
   margin: 0;
 }
 

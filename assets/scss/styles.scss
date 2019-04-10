@@ -18,10 +18,12 @@
 // Frameworks
 @import 'framework/normalize';
 @import 'framework/skeleton';
-// Core Components
-@import 'components/core';
-// Body Components
-@import 'components/left';
-@import 'components/main';
-// Print overwrites
-@import 'components/print';
+// Dark
+@import 'components/core/globals';
+@import 'all';
+
+// Light
+/*html.light {
+  @import 'components/core/light_globals';
+  @import 'all';
+}*/

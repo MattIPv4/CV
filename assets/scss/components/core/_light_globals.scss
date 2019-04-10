@@ -4,20 +4,11 @@
  *  Copyright (C) 2018 Matt Cowley (MattIPv4) (me@mattcowley.co.uk)
  *  Please see <https://github.com/MattIPv4/CV/blob/master/LICENSE.md> for the full license.
  */
-.details {
+@import 'globals';
 
-  .name {
-    text-transform: uppercase;
-    font-size: 32px;
-    margin: 43px 0 0;
-  }
+$border-color: $white;
+$border: 1px solid $border-color; // Redefine with new color
 
-  .occupation {
-    text-transform: uppercase;
-    margin-top: 5px;
-    color: mix($white, $primary, 15%);
-    font-size: 12px;
-    letter-spacing: 2px;
-    padding-left: 7px;
-  }
-}
+$white: darken($background, 25%); // Based on background but darker
+
+$background: #fff;
