@@ -19,6 +19,20 @@
       color: #000;
     }
 
+    [data-noprint], [data-atob] {
+      display: none;
+    }
+
+    [data-unloaded] {
+      * {
+        display: none;
+      }
+
+      &::after {
+        content: 'Content not loaded';
+      }
+    }
+
     .left,
     .main {
       margin-left: 0 !important;

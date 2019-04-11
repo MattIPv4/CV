@@ -7,6 +7,7 @@
 .main {
   @import 'main/header';
   @import 'main/content';
+  @import 'main/table';
   @import 'main/footer';
 
   border-left: $border;
