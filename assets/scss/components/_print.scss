@@ -14,56 +14,62 @@
   body {
     background: #fff;
     color: #000;
-  }
 
-  a {
-    color: #000;
-  }
-
-  .left,
-  .main {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-  }
-
-  .main {
-    border: 0;
-
-    .line, .menu {
-      display: none;
+    a {
+      color: #000;
     }
-  }
 
-  .left {
-    .links {
-      .icons {
-        flex-direction: column;
+    .left,
+    .main {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: 100% !important;
+    }
 
-        li {
-          margin: 0 0 0 10px;
+    .main {
+      border: 0;
 
-          a {
-            border-bottom-width: 0 !important;
-            border-left-width: 2px !important;
-            border-radius: 0;
-            border-right-width: 0 !important;
-            border-top-width: 0 !important;
-            font-size: 16px;
-            padding: 0 0 0 5px;
+      .block,
+      .footer .name {
+        margin-left: 0;
+        margin-right: 0;
+      }
 
-            &::after {
-              content: ' - ' attr(href);
+      .line, .menu {
+        display: none;
+      }
+    }
+
+    .left {
+      .links {
+        .icons {
+          flex-direction: column;
+
+          li {
+            margin: 0 0 0 10px;
+
+            a {
+              border-bottom-width: 0 !important;
+              border-left-width: 2px !important;
+              border-radius: 0;
+              border-right-width: 0 !important;
+              border-top-width: 0 !important;
+              font-size: 16px;
+              padding: 0 0 0 5px;
+
+              &::after {
+                content: ' - ' attr(href);
+              }
             }
           }
         }
       }
     }
-  }
 
-  .contact {
-    .cta {
-      display: none;
+    .contact {
+      .cta {
+        display: none;
+      }
     }
   }
 }
