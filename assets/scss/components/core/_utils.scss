@@ -28,9 +28,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
   li {
     padding-left: 0;
     text-indent: 0;
+
     &:before {
       content: none;
     }
@@ -94,4 +96,8 @@
   &:hover {
     background: darken($highlight, 10%);
   }
+}
+
+[data-atob] {
+  opacity: 0;
 }

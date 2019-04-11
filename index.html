@@ -79,8 +79,8 @@
             <div class="details">
                 <h1 class="name">Matt <span class="highlight">Cowley</span></h1>
                 <h2 class="occupation">
-                    Community Manager @ cdnjs.com
-                    <br/>Developer Relations @ js.org
+                    Community Manager <span class="highlight">@ cdnjs.com</span>
+                    <br/>Developer Relations <span class="highlight">@ js.org</span>
                     <br/>
                     <br/>Community Management, Website Design & Development, Software Engineering.
                     <br/>
@@ -100,23 +100,23 @@
                 <h2>Contact details</h2>
 
                 <p class="highlight">Phone:</p>
-                <p>+44 7507 037511</p>
+                <p data-atob>KzQ0ICgwKSA3NTA3IDAzNzUxMQ==</p>
 
                 <p class="highlight">Email:</p>
-                <p>me@mattcowley.co.uk</p>
+                <p id="email" data-atob>bWVAbWF0dGNvd2xleS5jby51aw==</p>
 
                 <p class="highlight">I'm looking for work:</p>
-                <a href="mailto:me@mattcowley.co.uk" class="cta">
+                <a href="javascript:window.location.href='mailto:'+document.getElementById('email').textContent;"
+                   class="cta">
                     <span class="cut1"></span>
                     <span class="cut2"></span>
                     <span class="content">Send me a message</span>
                 </a>
 
                 <p class="highlight">Location:</p>
-                <p>Tylers Green,</p>
-                <p>High Wycombe,</p>
-                <p>Buckinghamshire,</p>
-                <p>United Kindgom</p>
+                <p data-atob>
+                    VHlsZXJzIEdyZWVuLDxici8+SGlnaCBXeWNvbWJlLDxici8+QnVja2luZ2hhbXNoaXJlLDxici8+VW5pdGVkIEtpbmRnb20=
+                </p>
                 <p>
                     <small>(45 minutes from London)</small>
                 </p>
@@ -167,6 +167,44 @@
                 </blockquote>
             </div>
             <!-- End Education -->
+
+            <!-- References -->
+            <div class="references">
+                <h2>References</h2>
+
+                <p>Mark Oldknow</p>
+                <blockquote>
+                    <p>
+                        Artistic Director, Young Theatre
+                        <br/><span class="highlight" data-atob>bWFyay5vbGRrbm93QHlvdW5ndGhlYXRyZS5vcmcudWs=</span>
+                    </p>
+                </blockquote>
+
+                <p>Andrew Balaam</p>
+                <blockquote>
+                    <p>
+                        Team Leader (SLST) &amp; Teacher, Royal Grammar School
+                        <br/><span class="highlight" data-atob>YWNiQHJnc2h3LmNvbQ==</span>
+                    </p>
+                </blockquote>
+
+                <p>Ben Krebs</p>
+                <blockquote>
+                    <p>
+                        Professional Technical Manager
+                        <br/><span class="highlight" data-atob>YmVuQGtyZWJzLm9yZy51aw==</span>
+                    </p>
+                </blockquote>
+
+                <p>Luke Hashman</p>
+                <blockquote>
+                    <p>
+                        Former Station Controller, Blink FM, Wycombe Youth Action
+                        <br/><span class="highlight" data-atob>bGpoYXNobWFuQGdtYWlsLmNvbQ==</span>
+                    </p>
+                </blockquote>
+            </div>
+            <!-- End References -->
         </div>
         <!-- End Left -->
 
@@ -829,7 +867,7 @@
             <!-- Footer -->
             <div class="footer">
                 <p class="name">
-                    Matt Cowley - CV (Last Update: 10/4/19)
+                    Matt Cowley - CV (Last Update: 11/4/19)
                     <br/><a href="https://cv.mattcowley.co.uk/">https://cv.mattcowley.co.uk/</a>
                 </p>
             </div>
@@ -841,6 +879,10 @@
     <!-- End Row -->
 </div>
 <!-- End Container -->
+
+<!-- De-encrypt Content -->
+<script src="assets/js/atob.min.js"></script>
+<!-- End De-encrypt Content -->
 
 <!-- Download and Print -->
 <script>
