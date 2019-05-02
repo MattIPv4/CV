@@ -53,14 +53,16 @@
         display: none;
       }
 
-      ul {
-        li {
-          a {
-            color: mix($primary, $white, 85%);
+      .item {
+        ul {
+          li {
+            a {
+              color: darken($primary, 25%) !important;
 
-            &::after {
-              content: ' (' attr(href) ')';
-              font-style: italic;
+              &::after {
+                content: ' (' attr(href) ')';
+                font-style: italic;
+              }
             }
           }
         }
