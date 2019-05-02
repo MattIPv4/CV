@@ -69,5 +69,14 @@ ul {
     font-size: 14px;
     line-height: 1em;
     margin-bottom: 10px;
+
+    a {
+      color: mix($primary, $white, 50%);
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+      }
+    }
   }
 }

@@ -52,6 +52,19 @@
       .line, .menu {
         display: none;
       }
+
+      ul {
+        li {
+          a {
+            color: mix($primary, $white, 85%);
+
+            &::after {
+              content: ' (' attr(href) ')';
+              font-style: italic;
+            }
+          }
+        }
+      }
     }
 
     .left {
