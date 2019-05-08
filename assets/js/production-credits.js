@@ -43,19 +43,19 @@ function production_credits() {
                 tbody.appendChild(row);
 
                 n = document.createElement("td");
-                n.textContent = credits[i].n;
+                n.textContent = credits[i].name;
                 row.appendChild(n);
 
                 c = document.createElement("td");
-                c.textContent = credits[i].c;
+                c.textContent = credits[i].position;
                 row.appendChild(c);
 
                 l = document.createElement("td");
-                l.textContent = credits[i].l;
+                l.textContent = credits[i].location;
                 row.appendChild(l);
 
                 d = document.createElement("td");
-                d.textContent = credits[i].d;
+                d.textContent = credits[i].date;
                 row.appendChild(d);
             }
 
@@ -63,7 +63,7 @@ function production_credits() {
             table.removeAttribute("data-unloaded");
         }
     };
-    xmlhttp.open("GET", "production-credits.json", true);
+    xmlhttp.open("GET", "data/production-credits.json", true);
     xmlhttp.send();
 }
 
