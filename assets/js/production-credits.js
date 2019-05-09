@@ -29,42 +29,36 @@ function production_credits() {
     tbody.firstElementChild.firstElementChild.textContent = "Loading credits...";
 
     // Fetch
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            // Clear table
-            tbody.removeChild(tbody.firstElementChild);
+    window.doXHR("data/production-credits.json", function (data) {
+        // Clear table
+        tbody.removeChild(tbody.firstElementChild);
 
-            // Generate rows
-            var credits = JSON.parse(this.responseText);
-            var row, n, c, l, d;
-            for (var i = 0; i < credits.length; ++i) {
-                row = document.createElement("tr");
-                tbody.appendChild(row);
+        // Generate rows
+        var row, n, c, l, d;
+        for (var i = 0; i < data.length; ++i) {
+            row = document.createElement("tr");
+            tbody.appendChild(row);
 
-                n = document.createElement("td");
-                n.textContent = credits[i].name;
-                row.appendChild(n);
+            n = document.createElement("td");
+            n.textContent = data[i].name;
+            row.appendChild(n);
 
-                c = document.createElement("td");
-                c.textContent = credits[i].position;
-                row.appendChild(c);
+            c = document.createElement("td");
+            c.textContent = data[i].position;
+            row.appendChild(c);
 
-                l = document.createElement("td");
-                l.textContent = credits[i].location;
-                row.appendChild(l);
+            l = document.createElement("td");
+            l.textContent = data[i].location;
+            row.appendChild(l);
 
-                d = document.createElement("td");
-                d.textContent = credits[i].date;
-                row.appendChild(d);
-            }
-
-            // Update attrs
-            table.removeAttribute("data-unloaded");
+            d = document.createElement("td");
+            d.textContent = data[i].date;
+            row.appendChild(d);
         }
-    };
-    xmlhttp.open("GET", "data/production-credits.json", true);
-    xmlhttp.send();
+
+        // Update attrs
+        table.removeAttribute("data-unloaded");
+    }, true);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
