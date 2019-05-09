@@ -1,19 +1,61 @@
 [
   {
-    "name": "",
+    "name": "Community ",
     "experience": [
       {
         "company": {
-          "name": "",
-          "url": "",
-          "headline": ""
+          "name": "cdnjs",
+          "url": "https://cdnjs.com",
+          "headline": "The #1 free and open source CDN built to make life easier for developers."
         },
         "position": {
-          "role": "",
-          "from": "",
-          "to": ""
+          "role": "Community Manager",
+          "from": "October 2018",
+          "to": null
         },
-        "points": [],
+        "points": [
+          "Working with [Cloudflare](https://cloudflare.com/) to resolve issues on the CDN as well as securing new sponsorships with companies such as [Atlassian Statuspage](https://statuspage.io/) for our new [status page](https://status.cdnjs.com/)",
+          "Managing the [cdnjs Twitter account](https://twitter.com/cdnjs) (and [status account](https://twitter.com/cdnjsStatus)), providing support to those who ask questions and triaging issues to be passed onto the maintainers.",
+          "Working with the cdnjs team to build [new documentation](https://github.com/cdnjs/new-docs), [updated branding](https://github.com/cdnjs/brand) and an active community around the service through our [GitHub organisation](https://github.com/cdnjs/cdnjs), [Discourse community](https://cdnjs.discourse.group/) and [Twitter following](https://twitter.com/cdnjs).",
+          "Creating and moderating our [Discourse forum](https://cdnjs.discourse.group/) to allow the community to interact with each other, get help on development issues, suggest improvements to the service and to meet the cdnjs team."
+        ],
+        "additional": []
+      },
+      {
+        "company": {
+          "name": "js.org",
+          "url": "https://js.org",
+          "headline": "JS.ORG - Dedicated to JavaScript and its awesome community since 2015."
+        },
+        "position": {
+          "role": "Developer Relations",
+          "from": "October 2018",
+          "to": null
+        },
+        "points": [
+          "Directly responsible for reviewing all pull requests made by third-party developers requesting their custom js.org subdomains on the [js.org GitHub repository](https://github.com/js-org/js.org).",
+          "Working with the js.org team and external contributors to develop new PR review and management systems through continuous integration (CI).",
+          "Handling the annual cleanup of the js.org active file to ensure all subdomains are valid, liaising with contributors on subdomains which have failed checks to resolve any issues."
+        ],
+        "additional": []
+      },
+      {
+        "company": {
+          "name": "JetBrains Community",
+          "url": null,
+          "headline": "JetBrains Community is the unofficial community for all things JetBrains."
+        },
+        "position": {
+          "role": "Community Manager\nalso, Developer",
+          "from": "April 2018",
+          "to": null
+        },
+        "points": [
+          "Working with the team at JetBrains to create [unique branding](https://github.com/JetBrains-Community/brand) for the community and to ensure that our operations align with what they expect of a user group.",
+          "Creating and manging a large [Discord server](https://discord.gg/dJK27sh) where the community is based as well as developing a [custom Discord bot](https://github.com/JetBrains-Community/discord) to provide dedicated JetBrains information for users.",
+          "Continually expanding the reach of the community not only on Discord but also through the expanding network of [JetBrains Community subreddits](https://www.reddit.com/user/SupremeDesigner/m/jetbrains_community/).",
+          "Running the [community Twitter account](https://twitter.com/jetbrainscomm) to provide key JetBrains updates to followers whilst also working to promote and build the community around JetBrains. Sharing interesting information and links to our community locations online."
+        ],
         "additional": []
       }
     ]
