@@ -1,7 +1,7 @@
 /**
  *  Matt Cowley - CV: An elegant and expandable CV design made with SASS, HTML and love.
  *  <https://github.com/MattIPv4/CV/>
- *  Copyright (C) 2019 Matt Cowley (MattIPv4) (me@mattcowley.co.uk)
+ *  Copyright (C) 2020 Matt Cowley (MattIPv4) (me@mattcowley.co.uk)
  *
  *  This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published
@@ -34,4 +34,20 @@ document.addEventListener("DOMContentLoaded", function () {
         collapses[i].setAttribute("data-collapsed", "0");
         collapses[i].addEventListener("click", toggleCollapse.bind(null, collapses[i]));
     }
+
+    document.querySelector("a.collapse-all").addEventListener("click", function() {
+        for (var i = 0; i < collapses.length; ++i) {
+            collapses[i].innerText = "(Expand)";
+            collapses[i].parentElement.parentElement.classList.add("collapsed");
+            collapses[i].setAttribute("data-collapsed", "1");
+        }
+    });
+
+    document.querySelector("a.expand-all").addEventListener("click", function() {
+        for (var i = 0; i < collapses.length; ++i) {
+            collapses[i].innerText = "(Collapse)";
+            collapses[i].parentElement.parentElement.classList.remove("collapsed");
+            collapses[i].setAttribute("data-collapsed", "0");
+        }
+    });
 });

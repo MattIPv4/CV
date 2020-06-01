@@ -1,7 +1,7 @@
 /**
  *  Matt Cowley - CV: An elegant and expandable CV design made with SASS, HTML and love.
  *  <https://github.com/MattIPv4/CV/>
- *  Copyright (C) 2019 Matt Cowley (MattIPv4) (me@mattcowley.co.uk)
+ *  Copyright (C) 2020 Matt Cowley (MattIPv4) (me@mattcowley.co.uk)
  *  Please see <https://github.com/MattIPv4/CV/blob/master/LICENSE.md> for the full license.
  */
 .block {
@@ -29,34 +29,43 @@
     margin-left: -5px;
   }
 
-  @media not print {
-    .collapse {
-      cursor: pointer;
-      display: inline-block;
-      font-size: .5em;
-      margin-left: 10px;
-    }
+  .collapse,
+  .collapse-all,
+  .expand-all {
+    cursor: pointer;
+    font-size: 1.4rem;
+  }
 
-    &.collapsed {
-      .item {
+  .collapse {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  &.collapsed {
+    .item {
+      margin-bottom: 0;
+
+      &.has-table {
+        display: none;
+      }
+
+      > section {
         margin-bottom: 0;
+        margin-top: 0;
 
-        > table {
+        + section {
+          border-left: 2px solid desaturate($primary, 50%);
+          margin: 0 0 0 5px;
+          padding: 0 0 0 10px;
+        }
+
+        > :not(blockquote) {
           display: none;
         }
 
-        > section {
-          margin-bottom: 0;
+        > blockquote {
+          margin-bottom: 5px;
           margin-top: 0;
-
-          > :not(blockquote) {
-            display: none;
-          }
-
-          > blockquote {
-            margin-bottom: 5px;
-            margin-top: 0;
-          }
         }
       }
     }
@@ -112,7 +121,7 @@
 
 ul {
   li {
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1em;
     margin-bottom: 10px;
   }

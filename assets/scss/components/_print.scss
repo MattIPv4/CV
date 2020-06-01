@@ -1,109 +1,151 @@
 /**
  *  Matt Cowley - CV: An elegant and expandable CV design made with SASS, HTML and love.
  *  <https://github.com/MattIPv4/CV/>
- *  Copyright (C) 2019 Matt Cowley (MattIPv4) (me@mattcowley.co.uk)
+ *  Copyright (C) 2020 Matt Cowley (MattIPv4) (me@mattcowley.co.uk)
  *  Please see <https://github.com/MattIPv4/CV/blob/master/LICENSE.md> for the full license.
  */
 @media print {
-
   *, h1, h2, h3, h4, h5, h6, blockquote, p, a, li {
     font-family: Helvetica, sans-serif !important;
     letter-spacing: normal !important;
   }
 
-  body {
-    background: #fff;
-    color: #000;
+  html {
+    font-size: 8px;
 
-    a {
+    body {
+      background: #fff;
       color: #000;
-    }
 
-    [data-noprint], [data-atob] {
-      display: none;
-    }
+      .container {
+        width: 100%;
+        max-width: none;
 
-    [data-unloaded] {
-      * {
-        display: none;
-      }
+        .column {
+          &.one-third {
+            width: 30.6666666667%;
+          }
 
-      &::after {
-        content: 'Content not loaded';
-      }
-    }
+          &.two-thirds {
+            width: 65.3333333333%;
+          }
+        }
 
-    .left,
-    .main {
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-      width: 100% !important;
-    }
+        a {
+          color: #000;
+        }
 
-    .main {
-      border: 0;
+        [data-noprint], [data-atob] {
+          display: none;
+        }
 
-      .block,
-      .footer .name {
-        margin-left: 0;
-        margin-right: 0;
-      }
+        [data-unloaded] {
+          * {
+            display: none;
+          }
 
-      .line, .menu, .collapse {
-        display: none;
-      }
+          &::after {
+            content: 'Content not loaded';
+          }
+        }
 
-      .item {
-        ul {
-          li {
-            a {
-              color: darken($primary, 25%) !important;
+        .main {
+          border-left-color: #aaa;
+          margin-left: 2%;
+          padding-left: 2%;
 
-              &::after {
-                content: ' (' attr(href) ')';
-                font-style: italic;
+          .block,
+          .footer .name {
+            margin-left: 0;
+            margin-right: 0;
+          }
+
+          .line,
+          .menu,
+          .collapse,
+          .collapse-all,
+          .expand-all {
+            display: none !important;
+          }
+
+          .block {
+            &:first-child {
+              &,
+              h2 {
+                margin-top: 0;
+              }
+            }
+
+            &:not(:first-child) {
+              h2 {
+                font-size: 2.2rem;
+              }
+            }
+
+            h2 {
+              margin: 16px 0 8px;
+            }
+          }
+
+          .item {
+            ul {
+              li {
+                a {
+                  color: darken($primary, 25%) !important;
+
+                  &::after {
+                    content: ' (' attr(href) ')';
+                    font-style: italic;
+                  }
+                }
+              }
+            }
+
+            table {
+              tr {
+                background: transparent;
               }
             }
           }
         }
 
-        table {
-          tr {
-            background: transparent;
+        .left {
+          .details {
+            .name {
+              margin: 0;
+            }
           }
-        }
-      }
-    }
 
-    .left {
-      .links {
-        .icons {
-          flex-direction: column;
+          .links {
+            .icons {
+              flex-direction: column;
 
-          li {
-            margin: 0 0 0 10px;
+              li {
+                margin: 0 0 0 10px;
 
-            a {
-              border-bottom-width: 0 !important;
-              border-left-width: 2px !important;
-              border-radius: 0;
-              border-right-width: 0 !important;
-              border-top-width: 0 !important;
-              font-size: 16px;
-              padding: 0 0 0 5px;
+                a {
+                  border-bottom-width: 0 !important;
+                  border-left-width: 2px !important;
+                  border-radius: 0;
+                  border-right-width: 0 !important;
+                  border-top-width: 0 !important;
+                  font-size: 1.6rem;
+                  padding: 0 0 0 5px;
 
-              &::after {
-                content: ' - ' attr(href);
+                  &::after {
+                    content: ' - ' attr(href);
+                  }
+                }
               }
             }
           }
         }
-      }
-    }
 
-    .contact {
-      .cta {
-        display: none;
+        .contact {
+          .cta {
+            display: none;
+          }
+        }
       }
     }
   }
